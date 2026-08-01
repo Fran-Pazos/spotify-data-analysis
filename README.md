@@ -2,57 +2,69 @@
 
 ## Overview
 
-This project explores a dataset of Spotify tracks to identify patterns and relationships between different audio features.
+This project performs an Exploratory Data Analysis (EDA) of a Spotify dataset containing 41,106 tracks from different decades, ranging from the 1960s to the 2010s.
 
-The analysis focuses on understanding the distribution of the variables and exploring correlations between them through exploratory data analysis and data visualization.
+The main objective is to explore the musical characteristics associated with song popularity and identify which features have the strongest relationship with the target variable.
 
 ## Dataset
 
-The dataset contains information about Spotify tracks, including:
+The dataset contains information about Spotify tracks and their musical characteristics.
 
-- Danceability
-- Energy
-- Valence
-- Tempo
-- Loudness
-- Duration
+Some of the main variables analyzed are:
+
+- `danceability`: how suitable a track is for dancing
+- `energy`: intensity and activity of the track
+- `valence`: the musical positivity or happiness conveyed by a track
+- `tempo`: tempo of the track
+- `loudness`: overall loudness of the track
+- `duration_ms`: track duration in milliseconds
+- `target`: popularity classification (0 = not popular, 1 = popular)
+- `decade`: decade associated with the track
+
+The complete dataset contains 20 variables.
 
 ## Tools and Technologies
 
 - Python
 - Pandas
-- Matplotlib
 - Seaborn
+- Matplotlib
 - Jupyter Notebook
 
 ## Analysis
 
-The project includes:
+The analysis includes:
 
-- Data exploration and cleaning
+- Dataset exploration
+- Data type inspection
 - Descriptive statistics
+- Missing value detection
 - Distribution analysis
+- Outlier detection using boxplots
 - Correlation analysis
+- Comparison of musical features between popular and non-popular tracks
 - Data visualization
-- Interpretation of the main findings
 
 ## Key Findings
 
-The analysis identified different relationships between the audio features.
+The analysis produced several relevant findings:
 
-Some of the main correlations observed were:
+- No missing values were found in the dataset.
+- `danceability`, `energy` and `valence` showed left-skewed distributions, with most values concentrated between approximately 0.2 and 0.8.
+- Outliers were identified, particularly in `energy`, and to a lesser extent in `danceability` and `valence`.
+- `danceability` showed the strongest correlation with the target variable (0.35).
+- `valence` showed a weaker positive correlation with the target variable (0.25).
+- `energy` had a lower correlation with the target variable (0.18).
+- Popular tracks tended to have higher levels of danceability and valence.
+- The difference in energy between popular and non-popular tracks was less pronounced.
 
-- Danceability and the target variable: 0.35
-- Valence and the target variable: 0.25
-- Energy and the target variable: 0.18
-
-The distributions of danceability, energy and valence also showed noticeable asymmetry.
+These results suggest that danceability and valence have a stronger relationship with song popularity than energy in this dataset.
 
 ## Project Structure
 
 ```text
 spotify-data-analysis/
 │
-├── spotify_analysis.ipynb
+├── Spotify_Analysis.ipynb
 ├── spotify_dataset.csv
 └── README.md
